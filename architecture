@@ -1,1 +1,30 @@
+User
+ │
+ │ 1. Submit long URL (POST)
+ ▼
+CreateShortUrl Lambda Function URL
+ │
+ │ 2. Generate short code
+ ▼
+CreateShortUrlFunction (Lambda)
+ │
+ │ 3. Store mapping
+ ▼
+DynamoDB (URLTable)
+ │
+ │ 4. Return short URL
+ ▼
+User
+ │
+ │ 5. Access short URL (GET)
+ ▼
+Redirect Lambda Function URL
+ │
+ │ 6. Lookup short code
+ ▼
+RedirectFunction (Lambda)
+ │
+ │ 7. HTTP 301 Redirect
+ ▼
+Original Website
 
